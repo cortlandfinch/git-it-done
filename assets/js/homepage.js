@@ -4,7 +4,9 @@ var repoContainerEl = document.querySelector("#repos-container");
 var repoSearchTerm = document.querySelector("#repo-search-term");
 
 var formSubmitHandler = function(event) {
+    // prevent page from refreshing
     event.preventDefault();
+
     // get value from input element
     var username = nameInputEl.value.trim();
 
@@ -84,4 +86,5 @@ var displayRepos = function(repos, searchTerm) {
     }
 };
 
+// add event listeners to forms
 userFormEl.addEventListener("submit", formSubmitHandler);
